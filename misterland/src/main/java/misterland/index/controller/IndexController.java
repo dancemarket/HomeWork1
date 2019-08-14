@@ -24,20 +24,16 @@ public class IndexController {
 	@Resource(name="indexService") 
 	private IndexService indexService;
 
-	@RequestMapping(value = "/index.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/index.do")
 	public ModelAndView home(Locale locale, ModelAndView mv) throws Exception{
-		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		String formattedDate = dateFormat.format(date);
+		String nowDate = "";
+		//String nowDate = indexService.selectNow();
 		
-		String result = indexService.selectNow();
-		
-		logger.info("Welcome home! result {}.", result);
+		logger.info("Welcome home! result {}.", nowDate);
 		
 		mv.setViewName("index");
-		mv.addObject("serverTime", formattedDate );
+		mv.addObject("nowDate", nowDate);
 		
 		return mv;
 	}

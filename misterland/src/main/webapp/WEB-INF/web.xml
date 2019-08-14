@@ -4,7 +4,12 @@
   <welcome-file-list>
       <welcome-file>index.html</welcome-file>
   </welcome-file-list>
-    
+  
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/views/common/error404.jsp</location>
+  </error-page>
+
   <!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
@@ -32,7 +37,7 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
-  <!-- utf-8 설정 -->
+  <!-- utf-8 encoding -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>

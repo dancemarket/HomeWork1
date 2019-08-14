@@ -4480,7 +4480,7 @@ footer .row-content.buffer {
 
 .owl-item.loading {
     min-height: 150px;
-    background: url(img/AjaxLoader.gif) no-repeat center center;
+    background: url(../img/AjaxLoader.gif) no-repeat center center;
 }
 
 .owl-theme .owl-controls .owl-buttons div {
@@ -4630,7 +4630,7 @@ footer .row-content.buffer {
 
 /* mouse grab icon */
 .grabbing {
-    cursor: url(img/grabbing.png) 8 8, move;
+    cursor: url(../img/grabbing.png) 8 8, move;
 }
 
 /* fix */
