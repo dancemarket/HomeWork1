@@ -1423,8 +1423,15 @@ a.reply:hover {
   transition: 0.4s;
 }
 
-.accordion.active, .accordion:hover {
+.accordion.importance {
   background-color: #ccc;
+  font-weight: 700;
+}
+
+.accordion.active, .accordion:hover {
+  /* background-color: #ccc; */
+  background-color: #FD685B;
+  color: #fff;
 }
 
 .accordion:after {

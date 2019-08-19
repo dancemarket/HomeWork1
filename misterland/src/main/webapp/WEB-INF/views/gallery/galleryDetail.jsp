@@ -11,7 +11,7 @@
 		<main role="main">
 			<div id="intro-wrap" data-height="22.222">
 				<div id="intro" class="preload darken">
-					<div class="intro-item" style="background-image: url(/img/front/top_20190725.jpg);">
+					<div class="intro-item" style="background-image: url(resources/img/front/top_20190725.jpg);">
 						<div class="caption">
 							<h2>양평 수향원</h2>
 							<p>헬쓰케어 리조트</p>
@@ -24,9 +24,9 @@
 				<div class="row-content buffer-left buffer-right buffer-bottom clear-after">
 					<div id="post-nav">
 						<ul class="clear-after reset plain">
-							<li id="prev-items" class="post-nav"><a href="#"><i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Prev</span></a></li>
-							<li id="all-items" class="post-nav"><a href="#"><i class="icon icon-images"></i></a></li>
-							<li id="next-items" class="post-nav"><a href="#"><span class="label hidden-mobile">Next</span><i class="fa fa-chevron-right"></i></a></li>
+							<li id="prev-items" class="post-nav"><a href="${pageContext.request.contextPath}/galleryDetail.do"><i class="fa fa-chevron-left"></i><span class="label hidden-mobile">Prev</span></a></li>
+							<li id="all-items" class="post-nav"><a href="${pageContext.request.contextPath}/gallery.do"><i class="icon icon-images"></i></a></li>
+							<li id="next-items" class="post-nav"><a href="${pageContext.request.contextPath}/galleryDetail.do"><span class="label hidden-mobile">Next</span><i class="fa fa-chevron-right"></i></a></li>
 						</ul>
 					</div>
 
@@ -37,9 +37,9 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 							<div class="gallery slider" data-autoplay="false" data-autoheight="true">
 								<figure>
-									<div><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130804988.jpg" alt=""></div>
-									<div><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130536697.jpg" alt=""></div>
-									<div><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130348265.jpg" alt=""></div>
+									<div><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130804988.jpg" alt=""></div>
+									<div><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130536697.jpg" alt=""></div>
+									<div><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130348265.jpg" alt=""></div>
 								</figure>
 							</div><!-- gallery -->
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
@@ -69,19 +69,19 @@
 
 					</div><!-- post-area -->
 
-					<div class="meta-social">
+					<!-- <div class="meta-social">
 						<ul class="inline center">
 							<li><a href="#" class="twitter-share border-box"><i class="fa fa-twitter fa-lg"></i></a></li>
 							<li><a href="#" class="facebook-share border-box"><i class="fa fa-facebook fa-lg"></i></a></li>
 							<li><a href="#" class="pinterest-share border-box"><i class="fa fa-pinterest fa-lg"></i></a></li>
 						</ul>
-					</div>
+					</div> -->
 
 					<div class="related clear-after">
 						<h4>Related Projects</h4>
 						<div class="item">
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130059577.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130059577.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-search"></i></div>
 									<h2>Spicemode</h2>
@@ -90,8 +90,8 @@
 							</a><!-- overlay -->
 						</div>
 						<div class="item">
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130111018.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130111018.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-search"></i></div>
 									<h2>In the end</h2>
@@ -100,8 +100,8 @@
 							</a><!-- overlay -->
 						</div>
 						<div class="item last">
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130556975.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130556975.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-search"></i></div>
 									<h2>Moove</h2>

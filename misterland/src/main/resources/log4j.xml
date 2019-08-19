@@ -15,12 +15,23 @@
               <param name="ConversionPattern" value="%d %5p %m%n"/>
           </layout>  
     </appender>
-    <!--  -->
+    
+    <!-- file -->
+    <appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/hosting_users/landup/log/land.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- <param name="ConversionPattern" value="%d %p [%C{10}] %m [%X{userId}]%n" /> -->
+            <param name="ConversionPattern" value="%d %5p [%c] %m%n" />
+        </layout>  
+    </appender>
     
     <!-- Application Loggers -->
     <logger name="misterland" additivity="false">
         <level value="debug" />
         <appender-ref ref="console"/>
+        <appender-ref ref="rollingFile"/>
     </logger>
     
     <!-- Query Loggers -->
@@ -56,6 +67,7 @@
     <root>
         <priority value="off" />
         <appender-ref ref="console" />
+        <appender-ref ref="rollingFile"/>
     </root>
     
 </log4j:configuration>

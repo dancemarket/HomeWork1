@@ -16,15 +16,9 @@ public class NoticeServiceImpl implements NoticeService{
 	@Resource(name="noticeDAO")
 	private NoticeDAO noticeDAO;
 
-//	@Override
-//	public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-
 	@Override
-	public String selectNow() throws Exception {
-		return noticeDAO.selectNow();
+	public List<Map<String, Object>> selectNoticeList(Map<String, Object> map) throws Exception {
+		return noticeDAO.selectNoticeList(map);
 	}
 
 }

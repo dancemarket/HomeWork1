@@ -1,5 +1,10 @@
 package misterland.community.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.slf4j.Logger;
@@ -24,6 +29,16 @@ public class NoticeController {
 	@RequestMapping(value = "/notice.do")
 	public ModelAndView notice(Model model) throws Exception{
 		ModelAndView mv = new ModelAndView("community/notice");
+		List<Map<String, Object>> noticeList = new ArrayList<Map<String, Object>>();
+		
+		try {
+			Map<String, Object> map = new HashMap<String, Object>();
+			noticeList = noticeService.selectNoticeList(map);		
+		}catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		
+		mv.addObject("noticeList", noticeList);
 		return mv;
 	}
 	

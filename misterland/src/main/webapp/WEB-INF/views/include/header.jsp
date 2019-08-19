@@ -28,7 +28,7 @@
 						</ul>
 					</li>
 					<li class="menu-item">
-						<a href="notice.html">커뮤니티</a>
+						<a href="${pageContext.request.contextPath}/notice.do">커뮤니티</a>
 						<ul class="sub-menu">
 							<li class="menu-item"><a href="${pageContext.request.contextPath}/notice.do">공지사항</a></li>
 							<li class="menu-item"><a href="${pageContext.request.contextPath}/faq.do">자주하는질문</a></li>

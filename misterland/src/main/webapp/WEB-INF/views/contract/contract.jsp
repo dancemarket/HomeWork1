@@ -11,7 +11,7 @@
 		<main role="main">
 			<div id="intro-wrap" data-height="22.222">
 				<div id="intro" class="preload darken">
-					<div class="intro-item" style="background-image: url(/img/front/top_20190725.jpg);">
+					<div class="intro-item" style="background-image: url(resources/img/front/top_20190725.jpg);">
 						<div class="caption">
 							<h2>Stories I Tell</h2>
 							<p>The universe is made of stories, not of atoms.</p>

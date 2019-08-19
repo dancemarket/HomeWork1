@@ -12,7 +12,7 @@
 			<div id="intro-wrap" data-height="22.222">
 				<div id="intro" class="preload darken">
 					<!-- <div class="intro-item" style="background-image: url(http://placehold.it/1800x600/ddd/fff&text=Beetle%20image);"> -->
-					<div class="intro-item" style="background-image: url(/img/front/top_20190725.jpg);">
+					<div class="intro-item" style="background-image: url(resources/img/front/top_20190725.jpg);">
 						<div class="caption">
 							<h2>환영합니다</h2>
 							<p>Welcome to Mister Land</p>
@@ -34,8 +34,8 @@
 					</ul>
 					<div class="grid-items portfolio-section preload">
 						<article class="item column four" data-groups='["fun", "icons"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130825841.jpg" alt=""></figure>
-							<a class="overlay" href="gallery_detail.html">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130825841.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-picture"></i></div>
 									<h2>Taj Mahal</h2>
@@ -44,8 +44,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column eight" data-groups='["lightbox", "minimal"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130804988.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130804988.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-video"></i></div>
 									<h2>Coffe addiction</h2>
@@ -54,8 +54,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["fun", "icons"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130835907.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130835907.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-picture"></i></div>
 									<h2>Green Technology</h2>
@@ -64,8 +64,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["infographics", "web-design"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130705343.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130705343.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-picture"></i></div>
 									<h2>Essentials</h2>
@@ -74,8 +74,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["advertising", "lightbox", "web-design"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130348265.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130348265.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-video"></i></div>
 									<h2>If the music is too low</h2>
@@ -84,8 +84,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["web-design", "minimal"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130132999.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130132999.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-news"></i></div>
 									<h2>Sim World</h2>
@@ -94,8 +94,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["advertising", "infographics"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130122281.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130122281.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-camera"></i></div>
 									<h2>Code School</h2>
@@ -104,8 +104,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["fun", "icons"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130111018.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130111018.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-news"></i></div>
 									<h2>Stamps</h2>
@@ -114,8 +114,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["advertising", "fun"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130210075.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130210075.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-speaker-on"></i></div>
 									<h2>Summer camp</h2>
@@ -124,8 +124,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["icons"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130236743.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130236743.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-video"></i></div>
 									<h2>Holiday Gift Guide</h2>
@@ -134,8 +134,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["fun", "advertising"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130524106.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130524106.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-camera"></i></div>
 									<h2>Telephone love</h2>
@@ -144,8 +144,8 @@
 							</a><!-- overlay -->
 						</article>
 						<article class="item column four" data-groups='["fun", "infographics"]'>
-							<figure><img src="/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130348265.jpg" alt=""></figure>
-							<a class="overlay" href="#">
+							<figure><img src="${pageContext.request.contextPath}/resources/img/yangPyung_healthCare(2019)/KakaoTalk_20190724_130348265.jpg" alt=""></figure>
+							<a class="overlay" href="${pageContext.request.contextPath}/galleryDetail.do">
 								<div class="overlay-content">
 									<div class="post-type"><i class="icon icon-news"></i></div>
 									<h2>To resolve 2014</h2>

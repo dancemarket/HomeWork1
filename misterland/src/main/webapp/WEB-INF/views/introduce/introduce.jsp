@@ -6,49 +6,7 @@
 	</head>
 
 	<body class="page">
-
-	<header role="banner" class="transparent light">
-		<div class="row">
-			<div class="nav-inner row-content buffer-left buffer-right even clear-after">
-				<div id="brand">
-					<h1 class="reset">
-						<!--<img src="img/logo.png" alt="logo">-->
-						<a href="index.html">미스터랜드</a>
-					</h1>
-				</div><!-- brand -->
-				<a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
-				<nav>
-					<ul class="reset" role="navigation">
-						<li class="menu-item">
-							<a href="introduce.html">회사소개</a>
-						</li>
-						<li class="menu-item">
-							<a href="gallery.html">미스터갤러리</a>
-						</li>
-						<li class="menu-item">
-							<a href="request_contract.html">건축상담요청</a>
-						</li>
-						<li class="menu-item">
-							<a href="subcontractor_build.html">협력업체</a>
-							<ul class="sub-menu">
-								<li><a href="subcontractor_fund.html">자금</a></li>
-								<li><a href="subcontractor_architecture.html">건설</a></li>
-								<li><a href="subcontractor_build.html">시공</a></li>
-							</ul>
-						</li>
-						<li class="menu-item">
-							<a href="notice.html">커뮤니티</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="notice.html">공지사항</a></li>
-								<li class="menu-item"><a href="faq.html">자주하는질문</a></li>
-								<li class="menu-item"><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div><!-- row-content -->
-		</div><!-- row -->
-	</header>
+		<%@ include file="/WEB-INF/views/include/header.jsp" %>
 
 		<main role="main">
 			<div id="intro-wrap" class="full-height">

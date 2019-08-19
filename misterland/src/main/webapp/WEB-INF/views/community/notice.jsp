@@ -27,20 +27,15 @@
 						<div class="section-title"><h3>공지사항</h3></div>
 						<p>I’m an experienced and passionate user interface designer with interaction design background.<br>My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
 						<!-- accordion -->
-						<button class="accordion column">Section 1</button>
-						<div class="accordion_panel">
-						  <p>Lorem ipsum...</p>
-						</div>
-
-						<button class="accordion column">Section 2</button>
-						<div class="accordion_panel">
-						  <p>Lorem ipsum...</p>
-						</div>
-
-						<button class="accordion column">Section 3</button>
-						<div class="accordion_panel">
-						  <p>Lorem ipsum...</p>
-						</div>
+						<c:forEach var="item" items="${noticeList}" varStatus="status">
+							<button class="accordion column <c:if test="${item.IMPORTANCE != 99 }">importance</c:if> ">
+								${item.TITLE}
+							</button>
+							<div class="accordion_panel">
+								<h5>${item.INSERT_DATE }</h5>
+							  	<p>${item.CONTENT }</p>
+							</div>
+						</c:forEach>
 						<!-- //accordion  -->
 					</div>
 				</section>

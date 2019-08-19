@@ -59,7 +59,7 @@
 				</section>
 
 				<section class="row section">
-					<div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="img/marker.png" data-info="I am based in London, UK"></div>
+					<div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="resources/img/marker.png" data-info="I am based in London, UK"></div>
 				</section>
 
 			</div><!-- id-main -->
