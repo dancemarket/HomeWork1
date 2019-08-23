@@ -32,7 +32,14 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+	
+		<!-- spring mail api add -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -146,12 +153,38 @@
 		    <artifactId>jackson-mapper-asl</artifactId>
 		    <version>1.9.13</version>
 		</dependency>
-		 
 		<dependency>
 		    <groupId>org.codehaus.jackson</groupId>
 		    <artifactId>jackson-core-asl</artifactId>
 		    <version>1.9.13</version>
 		</dependency>
+		
+		<!-- json ajax -->
+		<dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>2.6.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>2.6.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-annotations</artifactId>
+	        <version>2.6.3</version>
+	    </dependency>   
+	    <dependency>
+	      <groupId>com.fasterxml.jackson.dataformat</groupId>
+	      <artifactId>jackson-dataformat-xml</artifactId>
+	      <version>2.6.3</version>        
+	    </dependency>
+	    <dependency>
+	      <groupId>org.codehaus.woodstox</groupId>
+	      <artifactId>woodstox-core-asl</artifactId>
+	      <version>4.4.1</version>
+	    </dependency>
 		
 		<!-- commons-logging -->
 		<dependency>
@@ -160,6 +193,29 @@
 		    <version>1.1.1</version>
 		</dependency>
 				
+		<!-- java mail api -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency> -->
+		<dependency>
+		      <groupId>org.thymeleaf</groupId>
+		      <artifactId>thymeleaf</artifactId>
+		      <version>2.0.16</version>
+		 </dependency>
+		 <dependency>
+		      <groupId>org.thymeleaf</groupId>
+		      <artifactId>thymeleaf-spring3</artifactId>
+		      <version>2.0.16</version>
+		 </dependency>
+				
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>

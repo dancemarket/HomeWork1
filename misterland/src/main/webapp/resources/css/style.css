@@ -2029,23 +2029,19 @@ section.greyish {
 
 .contact-section input.name,
 .contact-section input.email,
-.comment-form input.name,
-.comment-form input.email {
+.contact-section input.phone {
     padding-left: 3em;
 }
 
 .contact-section input.name,
 .contact-section input.email,
-.contact-section textarea,
-.comment-form input.name,
-.comment-form input.email,
-.comment-form textarea {
+.contact-section input.phone,
+.contact-section textarea {
     max-width: 100%;
     width: 100%;
 }
 
-.contact-section input[type="submit"],
-.comment-form input[type="submit"] {
+.contact-section input[type="button"] {
     float: right;
 }
 
@@ -3252,6 +3248,11 @@ footer .row-content.buffer {
 
 .icon-email:before {
     content: "\e038";
+}
+
+.icon-phone:before {
+    /* content: "\e075"; */
+    content: "\e047";
 }
 
 .icon-eye:before {

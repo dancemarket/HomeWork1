@@ -30,7 +30,7 @@ public class IndexController {
 		String nowDate = "";
 		//String nowDate = indexService.selectNow();
 		
-		logger.info("Welcome home! result {}.", nowDate);
+		logger.info("Welcome home!.");
 		
 		mv.setViewName("index");
 		mv.addObject("nowDate", nowDate);

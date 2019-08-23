@@ -27,7 +27,7 @@ public class NoticeController {
 	private NoticeService noticeService;
 
 	@RequestMapping(value = "/notice.do")
-	public ModelAndView notice(Model model) throws Exception{
+	public ModelAndView notice(Model model){
 		ModelAndView mv = new ModelAndView("community/notice");
 		List<Map<String, Object>> noticeList = new ArrayList<Map<String, Object>>();
 		

@@ -5,8 +5,8 @@
  
     <bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/landup?serverTimezone=Asia/Seoul"/>
-        <!-- <property name="url" value="jdbc:mysql://landup.cafe24.com:3306/landup?serverTimezone=Asia/Seoul"/> -->
+        <!-- <property name="url" value="jdbc:mysql://localhost:3306/landup?serverTimezone=Asia/Seoul"/> -->
+        <property name="url" value="jdbc:mysql://landup.cafe24.com:3306/landup?serverTimezone=Asia/Seoul"/>
         <property name="username" value="landup"/>
         <property name="password" value="dhqkrtk1"/>
     </bean>
@@ -26,7 +26,8 @@
         <property name="mapperLocations" value="classpath:/mapper/**/*_sql.xml" />
     </bean>
      
-    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
         <constructor-arg index="0" ref="sqlSession"/>
     </bean>
+
 </beans>

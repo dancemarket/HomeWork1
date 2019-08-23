@@ -1,14 +1,6 @@
-/*
- *   Beetle
- *   Written by Pasquale Vitiello (pasqualevitiello@gmail.com),
- *   mokaine.com
- */
-
-jQuery(document).ready(function ($) {
-
+$(document).ready(function ($) {
 
     /* Define some vars */
-
     var win = $(window),
         body = $('body'),
         header = $('header'),
@@ -1965,7 +1957,6 @@ jQuery(document).ready(function ($) {
 
             // map height
             if (!$map.parent('div').is('#intro')) {
-
                 // user defined size
                 $map.css({
                     'height': $map_height + 'em'
@@ -1974,17 +1965,13 @@ jQuery(document).ready(function ($) {
             } else {
 
                 function adaptMapH() {
-
                     var sectionH = $map.parent('#intro').height();
                     $map.css({
                         'height': sectionH
                     });
-
                 }
-
                 adaptMapH();
                 $(window).resize(adaptMapH);
-
             }
 
             google.maps.event.addListener(marker, 'click', function () {
@@ -1998,20 +1985,14 @@ jQuery(document).ready(function ($) {
                 google.maps.event.trigger(map, "resize");
                 map.setCenter(center);
             });
-
         });
-
     }
 
     if ($('.map').length) {
-
         googleMap();
-
     }
 
-
     /* Add some "last" classes */
-
     headerNav.find('.menu-item').last('li').addClass('last');
     $('#top-footer').find('.column').last('.column').addClass('last');
     $('.blog.list-style').find('article').last('article').addClass('last');
@@ -2019,18 +2000,13 @@ jQuery(document).ready(function ($) {
 
 
     /* Clear columns */
-
     var lastColumn = $('.column.last');
 
     if (lastColumn.length) {
-
         lastColumn.after('<div class="clear"></div>');
-
     }
 
-
     /* Initialize FluidVids.js */
-
     Fluidvids.init({
         selector: 'iframe',
         players: ['www.youtube.com', 'player.vimeo.com']
