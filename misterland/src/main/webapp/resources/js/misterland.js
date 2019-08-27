@@ -1188,706 +1188,59 @@ $(document).ready(function ($) {
                 grey1 = "#AAB2BD",
                 grey2 = "#CCD1D9",
                 darkgrey1 = "#434A54",
-                darkgrey2 = "#5f656d";
-
+                darkgrey2 = "#5f656d", 
+                basic = '#333';
+            
+            var textcolor = basic;
             if ($map_color == 'red') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": red1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": red2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = red1;
-
+                var styles = googleMapStyle(red1, red2);
+                textcolor = red1;
             }
             if ($map_color == 'orange') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": orange1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": orange2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = orange1;
-
+            	var styles = googleMapStyle(orange1, orange2);
+                textcolor = orange1;
             }
             if ($map_color == 'yellow') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": yellow1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": yellow2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = yellow1;
-
+            	var styles = googleMapStyle(yellow1, yellow2);
+                textcolor = yellow1;
             }
             if ($map_color == 'green') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": green1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": green2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = green1;
-
+            	var styles = googleMapStyle(green1, green2);
+            	textcolor = green1;
             }
             if ($map_color == 'mint') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": mint1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": mint2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = mint1;
-
+            	var styles = googleMapStyle(mint1, mint2);
+        		textcolor = mint1;
             }
             if ($map_color == 'aqua') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": aqua1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": aqua2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = aqua1;
-
+            	var styles = googleMapStyle(aqua1, aqua2);
+    			textcolor = aqua1;
             }
             if ($map_color == 'blue') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": blue1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": blue2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = blue1;
-
+            	var styles = googleMapStyle(blue1, blue2);
+				textcolor = blue1;
             }
             if ($map_color == 'purple') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": purple1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": purple2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = purple1;
-
+            	var styles = googleMapStyle(purple1, purple2);
+				textcolor = purple1;
             }
             if ($map_color == 'pink') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": pink1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": pink2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = pink1;
-
+            	var styles = googleMapStyle(pink1, pink2);
+				textcolor = pink1;
             }
             if ($map_color == 'white') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": white1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": white2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = '#333';
-
+            	var styles = googleMapStyle(white1, white2);
+				textcolor = basic;
             }
             if ($map_color == 'grey') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": grey1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": grey2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = '#333';
-
+            	var styles = googleMapStyle(grey1, grey2);
+				textcolor = basic;
             }
             if ($map_color == 'dark-grey') {
-
-                var styles = [{
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "color": darkgrey1
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.icon",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "stylers": [{
-                        "color": darkgrey2
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "transit",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "landscape.man_made",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }],
-                    textcolor = '#333';
-
+            	var styles = googleMapStyle(darkgrey1, darkgrey2);
+				textcolor = basic;
             }
             if ($map_color == 'invert') {
-
                 var styles = [{
                     "stylers": [{
                         "invert_lightness": "true"
@@ -1898,9 +1251,8 @@ $(document).ready(function ($) {
                     }, {
                         "lightness": "15"
                     }]
-                }],
-                    textcolor = '#333';
-
+                }];
+                textcolor = basic;
             }
 
             var styledMap = new google.maps.StyledMapType(styles, {
@@ -1988,8 +1340,185 @@ $(document).ready(function ($) {
         });
     }
 
+    function googleMapStyle(color1, color2){
+    	return [{
+            "elementType": "geometry.stroke",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "water",
+            "stylers": [{
+                "color": color1
+            }]
+        }, {
+            "featureType": "water",
+            "elementType": "labels.icon",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "landscape.natural",
+            "stylers": [{
+                "color": color2
+            }]
+        }, {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "poi",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "road",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "transit",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "landscape.man_made",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "administrative",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }];
+    }
+    
+    
+    /* Initialize kakao Maps */
+
+    function kakaoMap() {
+    	$('.map').each(function (i, e) {
+    		
+    		$map = $(e);
+            $map_lat = $map.attr('data-mapLat');
+            $map_lon = $map.attr('data-mapLon');
+            $map_zoom = parseInt($map.attr('data-mapZoom'));
+            $map_info = $map.attr('data-info');
+            $map_img = $map.attr('data-img');
+            $map_color = $map.attr('data-color');
+            $map_height = $map.attr('data-height');
+		
+            var latlng = new kakao.maps.LatLng($map_lat, $map_lon);
+			var options = { //지도를 생성할 때 필요한 기본 옵션
+					center: latlng,
+					level: $map_zoom //지도의 레벨(확대, 축소 정도)
+				};
+
+			/* Map's style */
+            var red1 = "#fd685b",
+                orange1 = "#fa6f57",
+                yellow1 = "#fecd5e",
+                green1 = "#a1d26e",
+                mint1 = "#4fcead",
+                aqua1 = "#4FC1E9",
+                blue1 = "#5D9CEC",
+                purple1 = "#ab94e9",
+                pink1 = "#ea89bf",
+                white1 = "#E6E9ED",
+                grey1 = "#AAB2BD",
+                darkgrey1 = "#434A54",
+                basic = '#333';
+            
+            var textcolor = basic;
+            if ($map_color == 'red') {
+                textcolor = red1;
+            }
+            if ($map_color == 'orange') {
+            	textcolor = orange1;
+            }
+            if ($map_color == 'yellow') {
+            	textcolor = yellow1;
+            }
+            if ($map_color == 'green') {
+            	textcolor = green1;
+            }
+            if ($map_color == 'mint') {
+            	textcolor = mint1;
+            }
+            if ($map_color == 'aqua') {
+            	textcolor = aqua1;
+            }
+            if ($map_color == 'blue') {
+            	textcolor = blue1;
+            }
+            if ($map_color == 'purple') {
+            	textcolor = purple1;
+            }
+            if ($map_color == 'pink') {
+            	textcolor = pink1;
+            }
+            
+			var map = new kakao.maps.Map($map[0], options);
+			
+			// 마커이미지 생성
+			var icon = new kakao.maps.MarkerImage(
+					$map_img, 
+					new kakao.maps.Size(52, 52), 
+					{offset: new kakao.maps.Point(26, 26)}
+				);
+			
+			// 마커 생성
+			var marker = new kakao.maps.Marker({
+				  position: latlng,
+				  image: icon // 마커이미지 설정 
+				});
+			
+			// 마커를 지도 위에 표시
+			marker.setMap(map);  
+			
+			// 커스텀 오버레이 설정
+			if($map_info != ''){
+				// 커스텀 오버레이에 표출될 내용
+				var contentString = '<div class="infoBox" style="width: 280px; position: absolute; visibility: visible; left: -139.872px; top: 40.1469px; cursor: default;">';
+				contentString += '<div class="infobox-inner" style="padding:10px 15px; color: ' + textcolor + ';">' + $map_info + '</div>';
+				contentString += '</div>';
+					
+				// 커스텀 오버레이 생성
+				var customOverlay = new kakao.maps.CustomOverlay({
+				    map: map,
+				    position: latlng,
+				    content: contentString,
+				    yAnchor: 1 
+				});
+				
+				// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+				kakao.maps.event.addListener(marker, 'click', function() {
+					customOverlay.setMap(map);
+				});
+			}
+
+			//맵 크기 설정
+			if($map_height != ''){
+				$map.css({
+	                'height': $map_height + 'em'
+	            });
+				map.relayout();
+			}
+			
+			//맵 영역 변경시 센터 유지
+			kakao.maps.event.addListener(map, 'bounds_changed', function() {
+                map.setCenter(latlng);
+			});
+			
+    	});
+    }
+    
     if ($('.map').length) {
-        googleMap();
+        //googleMap();
+    	kakaoMap();
     }
 
     /* Add some "last" classes */

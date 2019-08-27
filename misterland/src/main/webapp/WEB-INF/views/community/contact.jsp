@@ -26,16 +26,14 @@
 					<div class="row-content buffer even clear-after">
 						<div class="section-title"><h3>Contact Me</h3></div>
 						<p>I’m an experienced and passionate user interface designer with interaction design background.<br>My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
-						<div class="column nine">
-							<form id="contact-form" class="contact-section" method="post" action="">
-								<span class="pre-input"><i class="icon icon-user"></i></span>
-								<input class="name plain buffer" type="text" name="name" placeholder="Full name">
-								<span class="pre-input"><i class="icon icon-email"></i></span>
-								<input class="email plain buffer" type="email" name="email" placeholder="Email address">
-								<textarea class="plain buffer" name="message" placeholder="Don't forget that kindness is all!"></textarea>
-								<input id="send" class="plain button red" type="button" value="Send a Message">
-							</form>
-							<div id="success"></div>
+						<div class="column nine contact-section">
+							<span class="pre-input"><i class="icon icon-user"></i></span>
+							<input class="name plain buffer" type="text" name="name" id="name" placeholder="Full name">
+							<span class="pre-input"><i class="icon icon-email"></i></span>
+							<input class="email plain buffer" type="email" name="email" id="email" placeholder="Email address">
+							<textarea class="plain buffer" name="content" id="content" placeholder="Don't forget that kindness is all!"></textarea>
+							<input id="sendContact" class="plain button red" type="button" value="Send a Message">
+							<div id="resultMessage" style="display:none;"></div>
 						</div>
 						<div class="column three last">
 							<div class="widget">
@@ -59,12 +57,92 @@
 				</section>
 
 				<section class="row section">
-					<div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="resources/img/marker.png" data-info="I am based in London, UK"></div>
+ 					<!-- <div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="resources/img/marker.png" data-info="I am based in London, UK"></div> -->
+					<div class="map" data-height="22.222" data-mapLat="35.868130" data-mapLon="127.112427" data-mapZoom="3" data-color="" data-img="resources/img/marker.png" data-info="여기 있어요!"></div>
 				</section>
 
 			</div><!-- id-main -->
 		</main><!-- main -->
-
+		<script>
+			$(document).ready(function(){
+				//이메일 형식 체크
+				$("#email").blur(function(){
+			        var email = $(this).val();
+	
+			        // 값을 입력안한경우는 아예 체크를 하지 않는다.
+			        if( email == '' || email == 'undefined') return;
+	
+			        // 이메일 유효성 검사
+			        if(!utils.isValidEmail(email)) {
+			            alert('잘못된 형식의 이메일 주소입니다.');
+			            $(this).val('').focus();
+			            return false;
+			        }
+			    });
+				
+				$('#sendContact').click(function(){
+					//validation
+					if(utils.isEmpty($('#name').val())){
+						alert("이름을 입력해주세요");
+						$('#name').focus();
+						return;
+					}else if(utils.isEmpty($('#email').val())){
+						alert("이메일 주소를 입력해주세요");
+						$('#email').focus();
+						return;
+					}else if(utils.isEmpty($('#content').val())){
+						alert("내용을 입력해주세요");
+						$('#content').focus();
+						return;
+					}
+					
+					//버튼 타이틀 수정
+					$(this).val('Sending ...');	
+					
+					$.ajax({
+				       	url : "${pageContext.request.contextPath}/sendContact.do",
+				       	type: "POST",
+				     	dataType: "json",
+				        contentType: "application/json",
+				       	data: JSON.stringify({
+				       		name:$.trim($('#name').val()),
+							email:$.trim($('#email').val()),
+							content:$.trim($('#content').val()).replace(/(\n|\r\n)/g, '<br/>')
+				       	}),
+				       	complete : function(data) {
+				       		$('#sendContact').val('Send a Message');	//버튼 타이틀 원복
+				       		$('#resultMessage').show('slow');	//결과 메세지 열기
+				       		
+				       		//결과 메세지 노출 닫기
+				       		setTimeout(function(){
+				       			//결과 메세지 삭제
+				       			$('#resultMessage').hide('slow', function(){ 
+				       				$('#resultMessage p').remove(); 
+				       			});
+				       		}, 3000);
+				       	},
+				       	success : function(data) {
+				       		let html = '';
+							if(data.result){		       			
+								//값 리셋
+					       		$('div.contact-section > input, textarea').val("");
+					       		//결과 메세지 세팅
+					       		html = '<p style="color:#66A325;">접수되었습니다.<br/>빠른 시일 내에 연락드리겠습니다.</p>';
+							}else{
+								//결과 메세지 세팅
+				       			html = '<p style="color:#F84B3C;">신청 실패. 다시 신청해주세요.</p>';
+				       		}
+					       	$('#resultMessage').html(html);
+				       	},
+				       	error : function(xhr, status, error) {
+				       		//결과 메세지 세팅
+				       		let html = '<p style="color:#F84B3C;">신청 실패. 다시 신청해주세요.</p>';
+				       		$('#resultMessage').html(html);
+						}
+			   		});
+				});
+			});
+		</script>
 		<%@ include file="/WEB-INF/views/include/footer.jsp" %>
 	</body>
 </html>

@@ -117,10 +117,10 @@
 				     	dataType: "json",
 				        contentType: "application/json",
 				       	data: JSON.stringify({
-				       		name:$('#name').val().trim(),
-							email:$('#email').val().trim(),
-							phone:$('#phone').val().trim(),
-							content:$('#content').val().trim()
+				       		name:$.trim($('#name').val()),
+							email:$.trim($('#email').val()),
+							phone:$.trim($('#phone').val()),
+							content:$.trim($('#content').val()).replace(/(\n|\r\n)/g, '<br/>')
 				       	}),
 				       	complete : function(data) {
 				       		$('#sendContract').val('Send a Message');	//버튼 타이틀 원복
@@ -140,7 +140,7 @@
 								//값 리셋
 					       		$('div.contact-section > input, textarea').val("");
 					       		//결과 메세지 세팅
-					       		html = '<p style="color:#66A325;">신청해주셔서 감사합니다.<br>빠른 시일 내에 연락드리겠습니다.</p>';
+					       		html = '<p style="color:#66A325;">신청해주셔서 감사합니다.<br/>빠른 시일 내에 연락드리겠습니다.</p>';
 							}else{
 								//결과 메세지 세팅
 				       			html = '<p style="color:#F84B3C;">신청 실패. 다시 신청해주세요.</p>';

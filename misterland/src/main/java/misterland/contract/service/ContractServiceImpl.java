@@ -38,16 +38,16 @@ public class ContractServiceImpl implements ContractService{
 			logger.debug("▶ DB insert result : " + insRslt);
 			
 			//----------------------------------------------
-			//2. 이메일 발송
+			//2-1. 이메일 발송
 			//----------------------------------------------
 			if(map.get("email") != null && !"".equals(map.get("email"))) {
 				logger.debug("▶ send mail");
 				
 				//기본 값 세팅
 				MailVO email = new MailVO();			
-				email.setTemplateName("contract_template.html");
-				email.setMailFrom("jwo5000@daum.net");
 				email.setMailSubject("[미스터랜드] 계약상담신청 완료");
+				email.setTemplateName("contract_mail");
+				email.setMailFrom("jwo5000@daum.net");
 				//입력 값 세팅
 				email.setMailRecipient(map.get("name"));
 				email.setMailTo(map.get("email"));
@@ -56,7 +56,7 @@ public class ContractServiceImpl implements ContractService{
 			}
 	
 			//----------------------------------------------
-			//3. 문자 발송
+			//2-2. 문자 발송
 			//----------------------------------------------
 			if(map.get("phone") != null && !"".equals(map.get("phone"))) {
 				logger.debug("▶ send phone text");
@@ -64,7 +64,7 @@ public class ContractServiceImpl implements ContractService{
 			}
 	
 			//----------------------------------------------
-			//4. 건축상담요청 결과 세팅
+			//3. 건축상담요청 결과 세팅
 			//----------------------------------------------
 			result = (insRslt == 1)? true : false;				
 			

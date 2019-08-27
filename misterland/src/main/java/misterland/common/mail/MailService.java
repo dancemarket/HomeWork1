@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
+import misterland.common.exception.RequiredValueException;
+
 
 @Service("mailService")
 public class MailService {
@@ -32,25 +34,10 @@ public class MailService {
 	}
 	
 	public void send(final MailVO email) throws Exception{
-		/*MimeMessagePreparator messagePreparator = miemMessage -> {
-			MimeMessageHelper messageHelper = new MimeMessageHelper(miemMessage, true, "UTF-8");
-			messageHelper.setFrom(email.getMailFrom());
-			messageHelper.setTo(email.getMailTo());
-			messageHelper.setSubject(email.getMailSubject());
-			
-			logger.info("====================================");
-			logger.info(email.toString());
-			logger.info("====================================");
-			
-			//본문
-			String content = build(email);
-			messageHelper.setText(content, true);
-			
-//			//첨부파일
-//			FileSystemResource file = new FileSystemResource(new File("E:/test.hwp"));
-//			messageHelper.addAttachment("test.hwp", file);
-
-		};*/
+		if(email.getTemplateName() == null || email.getTemplateName().equals("")) {
+			throw new RequiredValueException("템플릿 정보 누락");
+		}
+		
 		final MimeMessagePreparator messagePreparator = new MimeMessagePreparator() { 
 			@Override public void prepare(MimeMessage mimeMessage) throws Exception { 
 				final MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
@@ -73,8 +60,14 @@ public class MailService {
 	
 	public String build(MailVO email) throws Exception{
 		Context context = new Context();
-		context.setVariable("name", email.getMailRecipient());
-		return templateEngine.process("contract_mail", context);
+		//내용 세팅
+		if(email.getTemplateName().equals("contract_mail")) {	//계약
+			context.setVariable("name", email.getMailRecipient());
+		}else if(email.getTemplateName().equals("contact_mail")) {	//문의
+			context.setVariable("name", email.getMailRecipient());
+			context.setVariable("content", email.getMailContent());
+		}
+		return templateEngine.process(email.getTemplateName(), context);
 	}
 	
 //	public void send(Map<String, Object> map) throws Exception{

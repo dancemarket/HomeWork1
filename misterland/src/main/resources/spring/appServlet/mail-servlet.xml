@@ -13,10 +13,19 @@
 		<property name="port" value="465" />
 		<property name="username" value="jwo5000@daum.net" />
 		<property name="password" value="jwo851023!" />
+		<property name="protocol" value="smtps" />
 		<property name="javaMailProperties">
 			<props>
-				<prop key="mail.transport.protocol">smtp</prop>
 				<prop key="mail.smtp.auth">true</prop>
+	            <prop key="mail.smtp.connectiontimeout">5000</prop>
+	            <prop key="mail.smtp.sendpartial">true</prop>
+	            <prop key="mail.smtp.userset">true</prop>
+	            <prop key="mail.smtp.isSecure">true</prop>
+	            <prop key="mail.smtp.requiresAuthentication">true</prop>
+	            <prop key="mail.smtp.auth">true</prop>
+	            <prop key="mail.smtp.port">465</prop>
+	            <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+	            <prop key="mail.smtp.socketFactory.fallback">false</prop>
 				<prop key="mail.smtp.ssl.enable">true</prop>
 				<prop key="mail.smtp.ssl.trust">smtp.daum.net</prop>
 				<prop key="mail.smtp.starttls.enable">true</prop>

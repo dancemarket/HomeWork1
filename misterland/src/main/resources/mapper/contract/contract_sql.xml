@@ -2,20 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="contract">
 
-	<select id="insertContract" parameterType="hashmap" resultType="int">
+	<insert id="insertContract" parameterType="hashmap">
 		<![CDATA[
             INSERT INTO CONTRACT (
                 CLIENT
 				, EMAIL
 				, PHONE_NO
 				, CONTENT
+				, INSERT_NAME
             ) VALUES (
                 #{ name},
                 #{ email},
                 #{ phone},
-                #{ content}
+                #{ content},
+                #{ name}
             )
         ]]>
-	</select>
+	</insert>
 	
 </mapper>

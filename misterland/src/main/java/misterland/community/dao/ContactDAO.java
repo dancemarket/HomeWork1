@@ -8,15 +8,10 @@ import misterland.common.dao.AbstractDAO;
 
 @Repository("contactDAO")
 public class ContactDAO extends AbstractDAO {
-	
-//	@SuppressWarnings("unchecked")
-//	public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception{ 
-//		return (List<Map<String, Object>>)selectList("contact.selectBoardList", map);
-//	}
-	
+
 	@SuppressWarnings("unchecked")
-	public String selectNow() throws Exception{ 
-		return (String)selectOne("contact.selectNow");
+	public int insertContact(Map<String, String> map) {
+		return (Integer) insert("contact.insertContact", map);
 	}
 
 }

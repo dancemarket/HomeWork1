@@ -19,6 +19,8 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=52e9aacee1cd0e3e1447ba1a23edfd20"></script>
+
 <!-- page moving js -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/plugins.js"></script>
