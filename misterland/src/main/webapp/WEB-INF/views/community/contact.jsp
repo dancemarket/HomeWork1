@@ -57,19 +57,12 @@
 				</section>
 
 				<section class="row section">
-<<<<<<< HEAD
  					<!-- <div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="resources/img/marker.png" data-info="I am based in London, UK"></div> -->
 					<div class="map" data-height="22.222" data-mapLat="35.868130" data-mapLon="127.112427" data-mapZoom="3" data-color="" data-img="resources/img/marker.png" data-info="여기 있어요!"></div>
-=======
-<!-- 					<div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="resources/img/marker.png" data-info="I am based in London, UK"></div> -->
-						<div id="map" style="height:400px;"></div>
-						
->>>>>>> refs/remotes/origin/master
 				</section>
 
 			</div><!-- id-main -->
 		</main><!-- main -->
-<<<<<<< HEAD
 		<script>
 			$(document).ready(function(){
 				//이메일 형식 체크
@@ -149,17 +142,6 @@
 			   		});
 				});
 			});
-=======
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=52e9aacee1cd0e3e1447ba1a23edfd20"></script>
-		<script>
-			var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-			var options = { //지도를 생성할 때 필요한 기본 옵션
-				center: new kakao.maps.LatLng(35.868130, 127.112427), //지도의 중심좌표.
-				level: 3 //지도의 레벨(확대, 축소 정도)
-			};
-	
-			var map = new kakao.maps.Map(container, options);
->>>>>>> refs/remotes/origin/master
 		</script>
 		<%@ include file="/WEB-INF/views/include/footer.jsp" %>
 	</body>
