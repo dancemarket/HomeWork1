@@ -58,6 +58,10 @@
 	       //var regex = /(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/;
 			var regex = /(^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/;
 	       return regex.test(str);
+		},
+		//전체 패턴값 변환
+		replaceAll : function(str, searchStr, replaceStr) {
+			return str.split(searchStr).join(replaceStr);
 		}
 	}
 
