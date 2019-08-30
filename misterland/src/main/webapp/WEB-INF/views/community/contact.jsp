@@ -25,7 +25,7 @@
 				<section class="row section">
 					<div class="row-content buffer even clear-after">
 						<div class="section-title"><h3>Contact Me</h3></div>
-						<p>I’m an experienced and passionate user interface designer with interaction design background.<br>My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
+						<p>미스터랜드에 궁금한 것이 있나요?<br>편하게 연락을 남겨주시면 친절하게 답변해드리겠습니다.</p>
 						<div class="column nine contact-section">
 							<span class="pre-input"><i class="icon icon-user"></i></span>
 							<input class="name plain buffer" type="text" name="name" id="name" placeholder="Full name">

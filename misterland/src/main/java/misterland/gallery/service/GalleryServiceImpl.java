@@ -16,15 +16,19 @@ public class GalleryServiceImpl implements GalleryService{
 	@Resource(name="galleryDAO")
 	private GalleryDAO galleryDAO;
 
-//	@Override
-//	public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-
 	@Override
-	public String selectNow() throws Exception {
-		return galleryDAO.selectNow();
+	public List<Map<String, Object>> selectIntroList(Map<String, String> map) throws Exception {
+		return galleryDAO.selectIntroList(map);
+	}
+	
+	@Override
+	public List<Map<String, Object>> selectTagList(Map<String, String> map) throws Exception {
+		return galleryDAO.selectTagList(map);
+	}
+	
+	@Override
+	public List<Map<String, Object>> selectGalleryList(Map<String, String> map) throws Exception {
+		return galleryDAO.selectGalleryList(map);
 	}
 
 }

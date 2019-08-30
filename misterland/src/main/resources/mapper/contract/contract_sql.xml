@@ -11,11 +11,11 @@
 				, CONTENT
 				, INSERT_NAME
             ) VALUES (
-                #{ name},
-                #{ email},
-                #{ phone},
-                #{ content},
-                #{ name}
+                #{name},
+                #{email},
+                #{phone},
+                #{content},
+                #{name}
             )
         ]]>
 	</insert>

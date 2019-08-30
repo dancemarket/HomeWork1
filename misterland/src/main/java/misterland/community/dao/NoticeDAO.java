@@ -11,7 +11,7 @@ import misterland.common.dao.AbstractDAO;
 public class NoticeDAO extends AbstractDAO {
 	
 	@SuppressWarnings("unchecked")
-	public List<Map<String, Object>> selectNoticeList(Map<String, Object> map) throws Exception{ 
+	public List<Map<String, Object>> selectNoticeList(Map<String, String> map) throws Exception{ 
 		return (List<Map<String, Object>>)selectList("notice.selectNoticeList", map);
 	}
 

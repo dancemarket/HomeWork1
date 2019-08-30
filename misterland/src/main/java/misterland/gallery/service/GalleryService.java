@@ -5,9 +5,11 @@ import java.util.Map;
 
 
 public interface GalleryService {
+
+	public List<Map<String, Object>> selectIntroList(Map<String, String> map) throws Exception;
+
+	public List<Map<String, Object>> selectTagList(Map<String, String> map) throws Exception;
 	
-//	public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception;
-	
-	public String selectNow() throws Exception;
+	public List<Map<String, Object>> selectGalleryList(Map<String, String> map) throws Exception;
 
 }

@@ -2,19 +2,49 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="gallery">
 
-	<!-- <select id="selectBoardList" parameterType="hashmap" resultType="hashmap">
+	<select id="selectIntroList" parameterType="hashmap" resultType="hashmap">
 		<![CDATA[ 
-			SELECT 
-				IDX, TITLE, HIT_CNT, CREA_DTM 
-			FROM TB_BOARD 
-			WHERE DEL_GB = 'N' 
-			ORDER BY IDX DESC 
+			SELECT SEQ
+				, IMG_NAME
+				, IMG_PATH
+				, TITLE
+				, DESCRIPTION
+			FROM PHOTOS
+			WHERE CATEGORY = #{category}
+				AND SHOW_YN = 'Y'
 		]]>
-	</select> -->
-
-	<select id="selectNow" resultType="string">
+	</select>
+	
+	<select id="selectTagList" parameterType="hashmap" resultType="hashmap">
 		<![CDATA[ 
-			SELECT NOW()
+			SELECT A.SEQ
+				, A.TAG_NAME
+				, COUNT(B.SEQ) AS TAG_CNT
+			FROM TAGS A
+				LEFT JOIN TAG_RELATIONS B ON (A.SEQ = B.TAG_SEQ)
+    			JOIN PHOTOS C ON (B.PHOTO_SEQ = C.SEQ AND C.CATEGORY = #{category} AND C.SHOW_YN = 'Y')
+			GROUP BY A.SEQ, A.TAG_NAME
+			ORDER BY TAG_CNT DESC
+			LIMIT 5
+		]]>
+	</select>
+	
+	<select id="selectGalleryList" parameterType="hashmap" resultType="hashmap">
+		<![CDATA[ 
+			SELECT A.SEQ AS PHOTO_SEQ
+				, A.IMG_NAME
+				, A.IMG_PATH
+				, A.TITLE
+				, A.DESCRIPTION
+				, DATE_FORMAT(A.INSERT_DATE, "%Y-%m-%d %H:%i:%s") AS INSERT_DATE
+				, GROUP_CONCAT(C.SEQ SEPARATOR ",") AS TAG_SEQS
+				, GROUP_CONCAT(C.TAG_NAME SEPARATOR ",") AS TAG_NAMES
+			FROM PHOTOS A
+				LEFT JOIN TAG_RELATIONS B ON (A.SEQ = B.PHOTO_SEQ)
+				LEFT JOIN TAGS C ON (B.TAG_SEQ = C.SEQ)
+			WHERE A.CATEGORY = #{category}
+				AND A.SHOW_YN = 'Y'
+			GROUP BY A.SEQ, A.IMG_NAME, A.IMG_PATH, A.TITLE, A.DESCRIPTION
 		]]>
 	</select>
 	

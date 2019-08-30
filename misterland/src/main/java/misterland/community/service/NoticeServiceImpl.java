@@ -17,7 +17,7 @@ public class NoticeServiceImpl implements NoticeService{
 	private NoticeDAO noticeDAO;
 
 	@Override
-	public List<Map<String, Object>> selectNoticeList(Map<String, Object> map) throws Exception {
+	public List<Map<String, Object>> selectNoticeList(Map<String, String> map) throws Exception {
 		return noticeDAO.selectNoticeList(map);
 	}
 

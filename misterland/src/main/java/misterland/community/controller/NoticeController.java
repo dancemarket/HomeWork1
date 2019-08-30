@@ -32,7 +32,7 @@ public class NoticeController {
 		List<Map<String, Object>> noticeList = new ArrayList<Map<String, Object>>();
 		
 		try {
-			Map<String, Object> map = new HashMap<String, Object>();
+			Map<String, String> map = new HashMap<String, String>();
 			noticeList = noticeService.selectNoticeList(map);		
 		}catch (Exception e) {
 			logger.error(e.getMessage());
